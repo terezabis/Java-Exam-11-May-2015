@@ -1,0 +1,287 @@
+import java.util.Scanner;
+
+public class MagicCard {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        String[] cardsFace = input.nextLine().split(" ");
+        String type = input.nextLine();
+        String magicCard = input.nextLine();
+        Character magicFace = magicCard.charAt(0);
+        Character magicSuit;
+
+        if (magicCard.length() == 2){
+            magicSuit = magicCard.charAt(1);
+        } else {
+            magicSuit = magicCard.charAt(2);
+        }
+
+        long sum = 0;
+
+        if ("even".equals(type)) {
+            for (int i = 0; i < cardsFace.length; i += 2) {
+                Character num = cardsFace[i].charAt(0);
+                Character boq;
+
+                if (cardsFace[i].length() == 2) {
+                    boq = cardsFace[i].charAt(1);
+                } else {
+                    boq = cardsFace[i].charAt(2);
+                }
+                switch (num) {
+                    case '2':
+                        if (magicFace.compareTo(num) == 0) {
+                            sum += 3 * 20;
+                        } else if (magicSuit.compareTo(boq) == 0) {
+                            sum += 2 * 20;
+                        } else {
+                            sum += 20;
+                        }
+                        break;
+                    case '3':
+                        if (magicFace.compareTo(num) == 0) {
+                            sum += 3 * 30;
+                        } else if (magicSuit.compareTo(boq) == 0) {
+                            sum += 2 * 30;
+                        } else {
+                            sum += 30;
+                        }
+                        break;
+                    case '4':
+                        if (magicFace.compareTo(num) == 0) {
+                            sum += 3 * 40;
+                        } else if (magicSuit.compareTo(boq) == 0) {
+                            sum += 2 * 40;
+                        } else {
+                            sum += 40;
+                        }
+                        break;
+                    case '5':
+                        if (magicFace.compareTo(num) == 0) {
+                            sum += 3 * 50;
+                        } else if (magicSuit.compareTo(boq) == 0) {
+                            sum += 2 * 50;
+                        } else {
+                            sum += 50;
+                        }
+                        break;
+                    case '6':
+                        if (magicFace.compareTo(num) == 0) {
+                            sum += 3 * 60;
+                        } else if (magicSuit.compareTo(boq) == 0) {
+                            sum += 2 * 60;
+                        } else {
+                            sum += 60;
+                        }
+                        break;
+                    case '7':
+                        if (magicFace.compareTo(num) == 0) {
+                            sum += 3 * 70;
+                        } else if (magicSuit.compareTo(boq) == 0) {
+                            sum += 2 * 70;
+                        } else {
+                            sum += 70;
+                        }
+                        break;
+                    case '8':
+                        if (magicFace.compareTo(num) == 0) {
+                            sum += 3 * 80;
+                        } else if (magicSuit.compareTo(boq) == 0) {
+                            sum += 2 * 80;
+                        } else {
+                            sum += 80;
+                        }
+                        break;
+                    case '9':
+                        if (magicFace.compareTo(num) == 0) {
+                            sum += 3 * 90;
+                        } else if (magicSuit.compareTo(boq) == 0) {
+                            sum += 2 * 90;
+                        } else {
+                            sum += 90;
+                        }
+                        break;
+                    case '1':
+                        if (magicFace.compareTo(num) == 0) {
+                            sum += 3 * 100;
+                        } else if (magicSuit.compareTo(boq) == 0) {
+                            sum += 2 * 100;
+                        } else {
+                            sum += 100;
+                        }
+                        break;
+                    case 'J':
+                        if (magicFace.compareTo(num) == 0) {
+                            sum += 3 * 120;
+                        } else if (magicSuit.compareTo(boq) == 0) {
+                            sum += 2 * 120;
+                        } else {
+                            sum += 120;
+                        }
+                        break;
+                    case 'Q':
+                        if (magicFace.compareTo(num) == 0) {
+                            sum += 3 * 130;
+                        } else if (magicSuit.compareTo(boq) == 0) {
+                            sum += 2 * 130;
+                        } else {
+                            sum += 130;
+                        }
+                        break;
+                    case 'K':
+                        if (magicFace.compareTo(num) == 0) {
+                            sum += 3 * 140;
+                        } else if (magicSuit.compareTo(boq) == 0) {
+                            sum += 2 * 140;
+                        } else {
+                            sum += 140;
+                        }
+                        break;
+                    case 'A':
+                        if (magicFace.compareTo(num) == 0) {
+                            sum += 3 * 150;
+                        } else if (magicSuit.compareTo(boq) == 0) {
+                            sum += 2 * 150;
+                        } else {
+                            sum += 150;
+                        }
+                        break;
+                    default:
+                        break;
+                }
+            }
+        } else {
+            for (int i = 1; i < cardsFace.length; i += 2) {
+                Character num = cardsFace[i].charAt(0);
+                Character boq;
+
+                if (cardsFace[i].length() == 2) {
+                    boq = cardsFace[i].charAt(1);
+                } else {
+                    boq = cardsFace[i].charAt(2);
+                }
+                switch (num) {
+                    case '2':
+                        if (magicFace.compareTo(num) == 0) {
+                            sum += 3 * 20;
+                        } else if (magicSuit.compareTo(boq) == 0) {
+                            sum += 2 * 20;
+                        } else {
+                            sum += 20;
+                        }
+                        break;
+                    case '3':
+                        if (magicFace.compareTo(num) == 0) {
+                            sum += 3 * 30;
+                        } else if (magicSuit.compareTo(boq) == 0) {
+                            sum += 2 * 30;
+                        } else {
+                            sum += 30;
+                        }
+                        break;
+                    case '4':
+                        if (magicFace.compareTo(num) == 0) {
+                            sum += 3 * 40;
+                        } else if (magicSuit.compareTo(boq) == 0) {
+                            sum += 2 * 40;
+                        } else {
+                            sum += 40;
+                        }
+                        break;
+                    case '5':
+                        if (magicFace.compareTo(num) == 0) {
+                            sum += 3 * 50;
+                        } else if (magicSuit.compareTo(boq) == 0) {
+                            sum += 2 * 50;
+                        } else {
+                            sum += 50;
+                        }
+                        break;
+                    case '6':
+                        if (magicFace.compareTo(num) == 0) {
+                            sum += 3 * 60;
+                        } else if (magicSuit.compareTo(boq) == 0) {
+                            sum += 2 * 60;
+                        } else {
+                            sum += 60;
+                        }
+                        break;
+                    case '7':
+                        if (magicFace.compareTo(num) == 0) {
+                            sum += 3 * 70;
+                        } else if (magicSuit.compareTo(boq) == 0) {
+                            sum += 2 * 70;
+                        } else {
+                            sum += 70;
+                        }
+                        break;
+                    case '8':
+                        if (magicFace.compareTo(num) == 0) {
+                            sum += 3 * 80;
+                        } else if (magicSuit.compareTo(boq) == 0) {
+                            sum += 2 * 80;
+                        } else {
+                            sum += 80;
+                        }
+                        break;
+                    case '9':
+                        if (magicFace.compareTo(num) == 0) {
+                            sum += 3 * 90;
+                        } else if (magicSuit.compareTo(boq) == 0) {
+                            sum += 2 * 90;
+                        } else {
+                            sum += 90;
+                        }
+                        break;
+                    case '1':
+                        if (magicFace.compareTo(num) == 0) {
+                            sum += 3 * 100;
+                        } else if (magicSuit.compareTo(boq) == 0) {
+                            sum += 2 * 100;
+                        } else {
+                            sum += 100;
+                        }
+                        break;
+                    case 'J':
+                        if (magicFace.compareTo(num) == 0) {
+                            sum += 3 * 120;
+                        } else if (magicSuit.compareTo(boq) == 0) {
+                            sum += 2 * 120;
+                        } else {
+                            sum += 120;
+                        }
+                        break;
+                    case 'Q':
+                        if (magicFace.compareTo(num) == 0) {
+                            sum += 3 * 130;
+                        } else if (magicSuit.compareTo(boq) == 0) {
+                            sum += 2 * 130;
+                        } else {
+                            sum += 130;
+                        }
+                        break;
+                    case 'K':
+                        if (magicFace.compareTo(num) == 0) {
+                            sum += 3 * 140;
+                        } else if (magicSuit.compareTo(boq) == 0) {
+                            sum += 2 * 140;
+                        } else {
+                            sum += 140;
+                        }
+                        break;
+                    case 'A':
+                        if (magicFace.compareTo(num) == 0) {
+                            sum += 3 * 150;
+                        } else if (magicSuit.compareTo(boq) == 0) {
+                            sum += 2 * 150;
+                        } else {
+                            sum += 150;
+                        }
+                        break;
+                    default:
+                        break;
+                }
+            }
+        }
+        System.out.println(sum);
+    }
+}
