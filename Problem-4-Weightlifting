@@ -1,4 +1,3 @@
-
 import java.util.*;
 
 public class Weightlifting {
@@ -32,9 +31,11 @@ public class Weightlifting {
 
         newBase.entrySet().stream().forEach(names -> {
             System.out.print(names.getKey() + " : ");
+            StringJoiner j=new StringJoiner(", ").setEmptyValue("nothing");
             names.getValue().entrySet().stream().forEach(exercise -> {
-                System.out.print(exercise.getKey() + " - " +  exercise.getValue() + " kg, ");
+                j.add(exercise.getKey() + " - " +  exercise.getValue() + " kg");
             });
+            System.out.print(j);
             System.out.println();
         });
     }
